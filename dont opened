@@ -1,0 +1,50 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Getkey = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.312267661, 0, 0.303030312, 0)
+Frame.Size = UDim2.new(0, 357, 0, 167)
+
+Getkey.Name = "Get key"
+Getkey.Parent = Frame
+Getkey.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Getkey.BorderColor3 = Color3.fromRGB(255, 255, 0)
+Getkey.BorderSizePixel = 0
+Getkey.Position = UDim2.new(0.18484813, 0, 0.162319705, 0)
+Getkey.Size = UDim2.new(0, 225, 0, 102)
+Getkey.Font = Enum.Font.Unknown
+Getkey.Text = "GET KEY"
+Getkey.TextColor3 = Color3.fromRGB(255, 0, 0)
+Getkey.TextSize = 33.000
+Getkey.TextWrapped = true
+Getkey.MouseButton1Click:Connect(function()
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Copied!"; Text = "colle le lien sur ton navigateur !"; Icon = "rbxassetid://9327507243";})
+	wait(0.7)
+	setclipboard("https://link-center.net/933904/get-key-t00ls6-hub") 
+end)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.218487397, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 27)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "get key pour T00ls6 HUB"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 21.000
